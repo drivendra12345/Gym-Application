@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Pricing = () => {
   const pricing = [
@@ -23,6 +23,7 @@ const Pricing = () => {
       length: 12,
     },
   ];
+
   return (
     <section className="pricing">
       <h1>ELITE EDGE FITNESS PLANS</h1>
@@ -38,22 +39,19 @@ const Pricing = () => {
                 <p>For {element.length} Months</p>
               </div>
               <div className="description">
-                <p>
-                  <Check /> Equipment
-                </p>
-                <p>
-                  <Check /> All Day Fre Training
-                </p>
-                <p>
-                  <Check /> Free Restroom
-                </p>
-                <p>
-                  <Check /> 24/7 Skilled Support
-                </p>
-                <p>
-                  <Check /> 20 Days Freezing Option
-                </p>
-                <Link to={"/"}>Join Now</Link>
+                <p><Check /> Equipment</p>
+                <p><Check /> All Day Free Training</p>
+                <p><Check /> Free Restroom</p>
+                <p><Check /> 24/7 Skilled Support</p>
+                <p><Check /> 20 Days Freezing Option</p>
+
+                {/* Toast Button */}
+                <button
+                  onClick={() => toast.success("You joined the course!")}
+                  className="join-btn"
+                >
+                  Join Now
+                </button>
               </div>
             </div>
           );

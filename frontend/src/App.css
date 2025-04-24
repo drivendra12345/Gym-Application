@@ -604,3 +604,20 @@ footer {
     gap: 1px;
   }
 }
+.join-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0; /* sharp corners */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #0056b3;
+}
+
+
